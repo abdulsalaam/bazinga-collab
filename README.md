@@ -21,13 +21,8 @@ We planed problem statement of document collaborate and signing using future tec
 
 As below high level architecture diagram and features whatewver we provide by solution
 
-Objectives >>
-A zero-trust datastore encompasses the ability to store private information locally, while maintaining trust and authenticity globally.
-Using decentralized constructs, like an Ethereum Claims Registries, alongside the uPort SimpleSigner libraries, it’s possible to store encrypted data on a smartphone and pass that information back to servers and applications without losing trust in its authenticity.
-Save information locally. Share data globally.
-Support document sign by multiple parties.
-Validates documents with a digital signature using a strong hash algorithm
-Sign legal documents onscreen or upload scanned signature
-Self-sovereign identity and user-centric data platform on Ethereum
-Provide document collaboration to other users with very high security mechanism.
+![doc signing collaborative](https://github.com/abdulsalaam/bazinga-collab/blob/master/public/assets/img/doc-signing-collabrate.png)
+
+
+![doc signing using blockchain](https://github.com/abdulsalaam/bazinga-collab/blob/master/public/assets/img/doc-signing-collabrate-high.png)
 
