@@ -1,5 +1,5 @@
 {
-  "name": "baziga",
+  "name": "bazinga",
   "version": "1.0.0",
   "description": "Peer-to-peer collaborative text editor",
   "main": "app.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Super-NES/baziga.git"
+    "url": "git+https://github.com/Super-NES/bazinga.git"
   },
   "author": "Super-NES",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Super-NES/baziga/issues"
+    "url": "https://github.com/Super-NES/bazinga/issues"
   },
-  "homepage": "https://github.com/Super-NES/baziga#readme",
+  "homepage": "https://github.com/Super-NES/bazinga#readme",
   "dependencies": {
     "acorn": "^6.1.1",
     "babel-cli": "^6.26.0",

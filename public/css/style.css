@@ -118,7 +118,7 @@ NavBar
 Editor
 ****************/
 
-#baziga {
+#bazinga {
   width: 100%;
   margin: 0 auto;
 }
@@ -420,7 +420,7 @@ ToolTip
   Loading
 *************/
 
-#baziga.hide + .loading {
+#bazinga.hide + .loading {
   display: block;
 }
 

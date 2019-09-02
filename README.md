@@ -1,5 +1,5 @@
 
-# Baziga: Collaborate in private
+# Bazinga: Collaborate in private
 This is a web based document collaboration editor. To run:
 
 

@@ -127,20 +127,20 @@ describe("Controller", () => {
   });
 
   describe('enableEditor', () => {
-    const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
+    const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
     const mockDoc = mockWin.document;
     const controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockWin.document, mockWin);
 
     it('removes the hide class from the editor element', () => {
-      mockDoc.getElementById('baziga').classList.add('hide');
+      mockDoc.getElementById('bazinga').classList.add('hide');
       controller.enableEditor(mockDoc);
-      expect(mockDoc.getElementById('baziga').classList.length).toEqual(0);
+      expect(mockDoc.getElementById('bazinga').classList.length).toEqual(0);
     });
   });
 
   describe("populateCRDT", () => {
     let controller, initialStruct, expectedStruct;
-    const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
+    const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
     const mockDoc = mockWin.document;
 
     beforeEach(() => {
@@ -169,7 +169,7 @@ describe("Controller", () => {
 
   describe("populateVersionVector", () => {
     let controller, initialVersions;
-    const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
+    const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
     const mockDoc = mockWin.document;
 
     beforeEach(() => {
@@ -199,7 +199,7 @@ describe("Controller", () => {
   });
 
   describe("addToNetwork", () => {
-    const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
+    const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
     const mockDoc = mockWin.document;
     const controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
     controller.broadcast.peer = mockPeer;
@@ -231,7 +231,7 @@ describe("Controller", () => {
   });
 
   describe("removeFromNetwork", () => {
-    const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
+    const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
     const mockDoc = mockWin.document;
     let controller;
 
@@ -271,7 +271,7 @@ describe("Controller", () => {
 
   describe('makeOwnName', () => {
     it('adds a peer flag to the list', () => {
-      const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
+      const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
       const mockDoc = mockWin.document;
       const controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
 
@@ -285,7 +285,7 @@ describe("Controller", () => {
     let controller, mockDoc, mockWin, connList;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p id="peerId"></p><p class='video-modal'></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
       connList = mockDoc.querySelector("#peerId").textContent;
@@ -502,7 +502,7 @@ describe("Controller", () => {
   });
 
   describe("handleSync", () => {
-    const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+    const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
     mockWin.history.pushState = function(one, two, three) {};
     const mockDoc = mockWin.document;
     const controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
@@ -572,7 +572,7 @@ describe("Controller", () => {
   describe('syncCompleted', () => {
     let mockWin, mockDoc, controller;
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockWin.history.pushState = function(one, two, three) {};
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
@@ -590,7 +590,7 @@ describe("Controller", () => {
     let mockWin, mockDoc, controller, mockOperation;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
       mockOperation = {};
@@ -644,7 +644,7 @@ describe("Controller", () => {
     let controller, op1, op2, version1, version2, mockWin, mockDoc;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
 
@@ -698,7 +698,7 @@ describe("Controller", () => {
     let controller, operation, mockWin, mockDoc;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
       operation = {type: "delete", char: {siteId: 1, counter: 1}};
@@ -721,7 +721,7 @@ describe("Controller", () => {
     let controller, operation, mockWin, mockDoc;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
 
@@ -778,7 +778,7 @@ describe("Controller", () => {
     let controller, mockDoc, mockWin;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
 
@@ -794,7 +794,7 @@ describe("Controller", () => {
   });
 
   describe("localInsert", () => {
-    const mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+    const mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
     const mockDoc = mockWin.document;
     const controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
 
@@ -813,7 +813,7 @@ describe("Controller", () => {
     let controller, newChar, mockWin, mockDoc;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
 
@@ -845,7 +845,7 @@ describe("Controller", () => {
     let controller, newChar, mockDoc, mockWin;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
 
@@ -872,7 +872,7 @@ describe("Controller", () => {
     let controller, mockDoc, mockWin;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
       spyOn(controller.editor, "insertText");
@@ -888,7 +888,7 @@ describe("Controller", () => {
     let controller, mockDoc, mockWin;
 
     beforeEach(() => {
-      mockWin = new JSDOM(`<!DOCTYPE html><p id='baziga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
+      mockWin = new JSDOM(`<!DOCTYPE html><p id='bazinga'></p><p class='minimize'></p><p class='exit'></p><p class='video-bar'></p><p id="peerId"></p><p class='video-modal'><video /></p><p class="copy-container"></p>`).window;
       mockDoc = mockWin.document;
       controller = new Controller(targetPeerId, host, mockPeer, mockBroadcast, mockEditor, mockDoc, mockWin);
       spyOn(controller.editor, "deleteText");
