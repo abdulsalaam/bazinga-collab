@@ -43,6 +43,6 @@
   "devDependencies": {
     "babel-register": "^6.26.0",
     "jasmine": "^2.8.0",
-    "jsdom": "^11.3.0"
+    "jsdom": "^16.5.0"
   }
 }
